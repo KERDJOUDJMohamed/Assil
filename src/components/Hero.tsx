@@ -1,7 +1,7 @@
 
 
 
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const BANNER_IMAGES = [
   "174ada0f-2c81-4fdd-b88c-269eda1a4f0e.jpg",
