@@ -30,10 +30,23 @@ const Hero = () => {
   return (
     <section
       className="w-full flex items-center justify-center relative"
-      style={{ minHeight: 0, background: "#18192a", padding: 0 }}
+      style={{ minHeight: 0, padding: 0, position: 'relative', overflow: 'hidden' }}
     >
+      {/* Blurred stretched background of current image */}
       <div
-        className="relative w-full max-w-4xl mx-auto overflow-hidden shadow-lg"
+        className="absolute inset-0 z-0"
+        aria-hidden="true"
+        style={{
+          background: `center/cover no-repeat url(/banner/${BANNER_IMAGES[idx]})`,
+          filter: 'blur(24px) brightness(0.85)',
+          transform: 'scale(1.08)',
+          width: '100%',
+          height: '100%',
+          transition: 'background 0.7s cubic-bezier(.4,0,.2,1)',
+        }}
+      />
+      <div
+        className="relative w-full max-w-4xl mx-auto overflow-hidden shadow-lg z-10"
         style={{ aspectRatio: "4/3", background: "transparent", minHeight: 0, height: "auto" }}
       >
         <div
@@ -55,7 +68,7 @@ const Hero = () => {
                 src={`/banner/${img}`}
                 alt="Showroom banner"
                 className="w-full h-full object-cover"
-                style={{ maxHeight: "100%", maxWidth: "100%", background: "#18192a" }}
+                style={{ maxHeight: "100%", maxWidth: "100%", background: "transparent", position: 'relative', zIndex: 2 }}
                 draggable={false}
               />
             </div>

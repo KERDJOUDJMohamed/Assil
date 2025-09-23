@@ -3,7 +3,7 @@
 import React from "react";
 import type { LangCode, I18nEntry } from "./types";
 
-export function useStoredLang(i18n: Record<LangCode, I18nEntry>) {
+export function useStoredLang(i18n: Record<LangCode, I18nEntry>, defaultLang: LangCode = "ar") {
   const KEY = "assil:lang";
   const getInitial = (): LangCode => {
     const saved = localStorage.getItem(KEY) as LangCode | null;
@@ -11,7 +11,7 @@ export function useStoredLang(i18n: Record<LangCode, I18nEntry>) {
     const nav = navigator.language || "";
     if (nav.startsWith("fr")) return "fr";
     if (nav.startsWith("en")) return "en";
-    return "ar";
+    return defaultLang;
   };
   const [lang, setLang] = React.useState<LangCode>(getInitial);
   React.useEffect(() => {

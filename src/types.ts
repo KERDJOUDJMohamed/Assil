@@ -1,3 +1,12 @@
+
+export type BrandPalette = {
+  violet: string;
+  magenta: string;
+  dark: string;
+  light: string;
+  softViolet: string;
+  softMagenta: string;
+};
 // Shared TypeScript types
 export type LangCode = "ar" | "fr" | "en";
 export type Localized<T = string> = Record<LangCode, T>;
@@ -28,6 +37,7 @@ export interface I18nEntry {
   ourShopBody: string;
   testimonialsTitle: string;
   agentsTitle: string;
+  partnersTitle: string;
   agentRoleLabel: string;
   whereToFindUsTitle: string;
   addressLabel: string;
