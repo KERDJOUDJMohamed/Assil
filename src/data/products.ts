@@ -2,11 +2,11 @@
 
 export const products = [
   {
-    img: "/products/colone-de-douche-arthermo-dodel-dream.jpg",
+    img: "/products/colone-de-douche-arthermo-model-dream.jpg",
     name: {
       ar: "عمود دش أرثيرمو دوديل دريم",
-      fr: "Colone De Douche Arthermo Dodel Dream",
-      en: "Shower Column Arthermo Dodel Dream",
+      fr: "Colone De Douche Arthermo Model Dream",
+      en: "Shower Column Arthermo Model Dream",
     },
     price: 28500,
   },
