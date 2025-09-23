@@ -1,4 +1,3 @@
-import React from "react";
 import type { FC } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import Zoom from "react-medium-image-zoom";
